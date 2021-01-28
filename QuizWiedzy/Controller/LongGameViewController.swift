@@ -7,7 +7,7 @@ class LongGameViewController: UIViewController {
     let userdefaults = UserDefaults.standard
     var lastScore = 0
     var highscore = 0
-    var quizBrain = QuizBrainLong()
+    var quizBrain = QuizBrain()
     var remianingTime = 30
     var timer1 = Timer()
     
@@ -51,7 +51,7 @@ class LongGameViewController: UIViewController {
         if userMadeMistake {
             
         }
-        quizBrain.nextQuestion()
+        quizBrain.nextQuestionLong()
         
         
         
@@ -79,7 +79,7 @@ class LongGameViewController: UIViewController {
         
         gameOver()
         
-        progressBar.progress = quizBrain.getProgress()
+        progressBar.progress = quizBrain.getProgressLong()
         choice1.backgroundColor = UIColor.clear
         choice2.backgroundColor = UIColor.clear
         choice3.backgroundColor = UIColor.clear
