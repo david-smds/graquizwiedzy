@@ -18,7 +18,7 @@ class MediumGameViewController: UIViewController {
     @IBOutlet weak var mistakeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var quizBrain = QuizBrainMedium()
+    var quizBrain = QuizBrain()
     var remianingTime = 30
     var timerMedium = Timer()
     
@@ -53,7 +53,7 @@ class MediumGameViewController: UIViewController {
         if userMadeMistake {
             
         }
-        quizBrain.nextQuestion()
+        quizBrain.nextQuestionMedium()
         
 
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateUIMedium), userInfo: nil, repeats: false)
@@ -79,7 +79,7 @@ class MediumGameViewController: UIViewController {
         
         gameOverMedium()
         
-        progressBar.progress = quizBrain.getProgress()
+        progressBar.progress = quizBrain.getProgressMedium()
         choice1.backgroundColor = UIColor.clear
         choice2.backgroundColor = UIColor.clear
         choice3.backgroundColor = UIColor.clear
